@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+/* settings
+---------------------------------------------------*/
+/* Reset
+---------------------------------*/
+/* A Modern CSS Reset */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    -webkit-animation-duration: .01ms !important;
+            animation-duration: .01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: .01ms !important;
+            transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===================================================================/*
+   font-family
+ ===================================================================*/
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+ 
+ /*サーバーにフォントアップ時*/
+ /* @font-face {
+   font-family: Jaguar;
+   font-style: normal;
+   font-weight: normal;
+   src: url("../fonts/Jaguar-Regular.eot");
+   src: url("../fonts/Jaguar-Regular.eot?#iefix") format("embedded-opentype"),
+     url("../fonts/Jaguar-Regular.woff") format("woff"),
+     url("../fonts/Jaguar-Regular.woff2") format("truetype");
+ }
+ @font-face {
+   font-family: Jaguar;
+   font-weight: bold;
+   src: url("../fonts/JaguarModernWeb-Bold.eot");
+   src: url("../fonts/JaguarModernWeb-Bold.eot?#iefix") format("embedded-opentype"),
+     url("../fonts/JaguarModernWeb-Bold.woff") format("woff"),
+     url("../fonts/JaguarModernWeb-Bold.woff2") format("truetype");
+ } */
+
+
+/* ===================================================================/*
+   Custom Propaty
+ =================================================================== */
+
+/* :root {
+  --main-gutter: 12px;
+  --main-position: center;
+  --main-lh: 1.5; */
+
+  /* color */
+  /* --main-color: #7117ea;
+  --sub-color: #ea6060;
+  --main-color: #7117ea;
+  --sub-color: #ea6060;
+  --bg-gradation: linear-gradient(135deg, var(--main-color) 0%, var(--sub-color) 100%) fixed;
+} */
+
+
+
+
+/* Base
+-------------------------------- */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none !important;
+}
+
+html,
+:root {
+  /* font size */
+  font-size: 62.5%;
+
+  /* position */
+  --main-position: center;
+
+  /*line-height*/
+  --main-lh: 1.5;
+
+  /* color */
+  --main-color: rgba(232, 162, 173, 0.8);
+  --sub-color: #dfac44;
+  --primary-color: #333;
+  --bg-gradation: linear-gradient(45deg, var(--main-color) 0%, var(--sub-color) 100%) fixed;
+
+  /* margin */
+  --main-gutter: 20px;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg-gradation);
+  /* background: -webkit-linear-gradient(45deg, rgba(239, 222, 181, 0.8), rgba(232, 162, 173, 0.8));
+  background: linear-gradient(45deg, rgba(239, 222, 181, 0.8), rgba(232, 162, 173, 0.8)); */
+  color: ver(--primary-color);
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: var(--main-lh); /*1.5*/
+  letter-spacing: 0;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-all;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  body {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    min-width: initial;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+header,
+main,
+footer {
+  margin: 0 auto;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  line-height: 1.8;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 767px) {
+  p {
+    line-height: 1.6;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #333;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: .6;
+}
+
+section {
+  position: relative;
+}
+
+hr {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+  margin: 0;
+}
+
+time {
+  font-size: 11px;
+  display: block;
+}
+
+dl dt {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  dl dt {
+    line-height: 1.6;
+  }
+}
+
+dl dd {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  dl dd {
+    line-height: 1.6;
+  }
+}
+
+caption, th {
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+input, textarea, select, button {
+  /*! autoprefixer: off */
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*! autoprefixer: on */
+  font-family: inherit;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.5;
+}
+
+iframe {
+  border: none;
+  overflow: hidden;
+}
+
+
+@media (min-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+.box {
+  margin: calc(var(--main-gutter) * 1px);
+}
